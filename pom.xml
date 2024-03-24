@@ -51,11 +51,8 @@
 
     <repositories>
         <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/OWNER/*</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>debian</id>
+            <url>file:///usr/share/maven-repo</url>
         </repository>
     </repositories>
 
