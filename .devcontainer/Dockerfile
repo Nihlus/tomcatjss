@@ -8,19 +8,27 @@ RUN apt-get update && apt-get install -y \
     libslf4j-java \
     libtomcat10-java \
     git \
-    curl
+    curl \
+    unzip \
+    procps \
+    libxext6 \
+    libxrender1 \
+    libxtst6 \
+    libxi6 \
+    libfreetype6
 
-RUN apt-get update && apt-get install -y \
-    openssh-server
 
-RUN mkdir /var/run/sshd
+#RUN apt-get update && apt-get install -y \
+#    openssh-server
 
-RUN echo 'root:docker' | chpasswd
+#RUN mkdir /var/run/sshd
 
-RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+#RUN echo 'root:docker' | chpasswd
 
-EXPOSE 22
+#RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+#EXPOSE 22
 
 # Start SSH server
-CMD ["/usr/sbin/sshd", "-D"]
+#CMD ["/usr/sbin/sshd", "-D"]
 

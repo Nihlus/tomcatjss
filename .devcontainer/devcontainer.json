@@ -1,4 +1,5 @@
 {
+    "name": "tomcatjss-debian12",
     "build": {
         "dockerfile": "Dockerfile"
     }
